@@ -1,1 +1,288 @@
-Hello World
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+
+
+<head bgcolor="gray">
+
+<script type="text/javascript" src="jquery.min.js"></script>
+
+<script type="text/javascript">
+  var g_pressed = false;
+  var all_elements = ["general", "research", "publication", "experience", "contact"];
+
+  function topArrowPressed(evt) {
+    g_pressed = false;
+    scrollBy(0,-50)
+  }
+  function downArrowPressed(evt) {
+    g_pressed = false;
+    scrollBy(0,50)
+  }
+  function leftArrowPressed(evt) {
+    g_pressed = false;
+    scrollBy(-20,0);
+  }
+  function rightArrowPressed() {
+    g_pressed = false;
+    scrollBy(20,0)
+  }
+  function gotoTop() {
+    g_pressed = false;
+    scroll(0,0); 
+  }
+  function gotoBottom() {
+    g_pressed = false;
+    scroll(0,10000); 
+  }
+
+  document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    switch (evt.keyCode) {
+      case 74:
+      downArrowPressed(evt);
+      break;
+
+      case 75:
+      topArrowPressed(evt);
+      break;
+
+      case 72:
+      leftArrowPressed(evt);
+      break;
+
+      case 76:
+      rightArrowPressed(evt);
+      break;
+
+      case 71:
+      if (g_pressed)
+        gotoTop();
+      else
+        g_pressed = true;
+      break;
+
+      default:
+      g_pressed = false;
+      break;
+      }
+  };
+
+  
+
+</script>
+
+
+
+<title>Jieming Yin's Homepage</title>
+<style>
+  div.ex
+  {
+    width: 800px;
+    padding: 40px 40px 40px 40px;
+    border: 3px solid #FF6200;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+  }
+
+  div.nav ul
+  {
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 60px;
+    padding: 5px;
+    list-style: none;
+    border-radius: 8px;
+  }
+  div.nav ul li
+  {
+    width: 19.4%;
+    float: left;
+    display: inline;
+  }
+  div.nav ul li a
+  {
+    text-align: center;
+    font-family:Arial;
+    text-shadow: 3px 2px 3px #333333;
+    padding: 8px 0;
+    display: block;
+    width: 100%;
+    color: #fff;
+    background: #646464; /* Old browsers */
+    background: -moz-linear-gradient(top, #2E2E2E 0%, #888888 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2E2E2E), color-stop(100%,#888888)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #2E2E2E0%,#888888 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #2E2E2E 0%,#888888 100%); /* Opera 11.10+ */
+    background: linear-gradient(to bottom, #2E2E2E 0%,#888888 100%); /* W3C standard, IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2E2E2E', endColorstr='#888888',GradientType=0 ); /* IE6-9 */
+  }
+
+  div.post
+  {
+    max-width: 800px;
+  }
+  div.post h3
+  {
+    margin: 5px 0px 5px 0px;
+  }
+
+  div.limit
+  {
+    max-width: 710px;
+  }
+  div.limit h3
+  {
+    margin: 5px 0px 5px 0px;
+  }
+
+  a
+  {
+    text-decoration:none;
+  }
+  a:visited
+  {
+    text-decoration:none;
+    color: #0030DF
+  }
+
+  p.post-footer
+  {
+    font-family:Arial;
+    font-size:10px;
+    margin: 2px 2px 5px 20px;
+  }
+</style>
+</head>
+
+
+<body bgcolor="#2E2E2E">
+<a name="top"></a>
+<div class="ex">
+<font color="2E2E2E"><h1 align="left">Jieming Yin</h1></font>
+<p>
+<font color="3F3F3F"><h3 align="left">&nbsp;&nbsp;PhD <br>
+&nbsp;&nbsp;Department of Computer Science and Engineering <br>
+&nbsp;&nbsp;University of Minnesota, Twin Cities</h3></font>
+</p><br>
+
+<div id="navbar" class="nav"><span><ul>
+<li><a href="#general"><span><b>General</b></font></span></a></li>
+<li><a href="#research"><span><b>Research</b></span></a></li>
+<li><a href="#publication"><span><b>Publication</b></span></a></li>
+<li><a href="#experience"><span><b>Experience</b></span></a></li>
+<li><a href="#contact"><span><b>Contact</b></span></a></li>
+</ul></span></div>
+
+
+<div id="general" class="post"><a name="general"></a>
+<img src="profile.jpg" style="float:right" width="178" height="235" hspace="20">
+<font color="FF4900"><h2 class="post-title">&nbsp;&nbsp;General</h2></font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I completed my Ph.D in <a href="http://www.cs.umn.edu/">Department of Computer Science and Engineering</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at <a href="http://www.umn.edu">University of Minnesota, Twin Cities</a>, in 2015,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;advised by <a href="http://www.cs.umn.edu/~zhai">Prof. Antonia Zhai</a>, and <a href="http://www.ece.umn.edu/users/sachin">Prof. Sachin S. Sapatnekar</a><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I currently work at AMD Research as a Postdoc<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to my <a href="CV_JiemingYin_VerCareer.pdf">Resume</a><br><br>
+
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;Education</h3>
+<ul>
+  <li>Ph.D. in Computer Science, University of Minnesota, Twin Cities, 2009-2015</li>
+  <li>B.Eng. in Electrical Engineering, Harbin Institute of Technology, China, 2004-2008</li><br>
+</ul>
+</div>
+<p class="post-footer"><a href="#top">BACK TO TOP </a></p>
+<hr>
+
+
+<div id="research" class="post"><a name="research"></a>
+<font color="FF4900"><h2 class="post-title">&nbsp;&nbsp;Research Interest</h2></font>
+<ul>
+  <li>Computer Architecture</li>
+  <li>Heterogeneous Multicore Processors</li>
+  <li>On-chip Interconnection Networks</li>
+  <li>Low Power Design</li><br>
+</ul>
+</div>
+<p class="post-footer"><a href="#top">BACK TO TOP </a></p>
+<hr>
+
+
+<div id="publication" class="limit"><a name="publication"></a>
+<font color="FF4900"><h2 class="post-title">&nbsp;&nbsp;Publication</h2></font>
+<ul>
+<h3 class="post-title">Conference Paper</h3>
+<ul>
+<li><b>Jieming Yin</b>, Onur Kayiran, Matthew Poremba, Natalie Enright Jerger, Gabriel H. Loh. <i><a href=HPCA2016.pdf>Efficient Synthetic Traffic Models for Large, Complex SoCs</a></i>. 22nd International Symposium on High Performance Computer Architecture (HPCA), Barcelona, Spain, March 2016. (<a href="Yin_HPCA16.ppsx">PowerPoint Show</a>) (Coming soon)</li><br>
+<li><b>Jieming Yin</b>, Pingqiang Zhou, Sachin S. Sapatnekar, and Antonia Zhai. <i><a href=IPDPS2014.pdf>Energy-Efficient Time-Division Multiplexed Hybrid-Switched NoC for Heterogeneous Multicore Systems</a></i>. 28th IEEE International Parallel & Distributed Processing Symposium (IPDPS), Phoenix, Arizona, USA, May 2014. (<a href="Yin_IPDPS14.ppsx">PowerPoint Show</a>) <b><font color="red">(NSF-TCPP Travel Grant)</font></b></li><br>
+<li><b>Jieming Yin</b>, Pingqiang Zhou, Anup P. Holey, Sachin S. Sapatnekar, and Antonia Zhai. <i><a href="http://dl.acm.org/citation.cfm?id=2333675">Energy Efficient Non-Minimal Path On-chip Interconnection Network for Heterogeneous Multicore Systems</a></i>. The International Symposium on Low Power Electronics and Design (ISLPED), Redondo Beach, USA, Aug. 2012. (<a href="Yin_ISLPED12.ppsx">PowerPoint Show</a>)</li><br>
+<li>Pingqiang Zhou, <b>Jieming Yin</b>, Antonia Zhai, and Sachin S. Sapatnekar. <i><a href="http://dl.acm.org/citation.cfm?id=2016897">NoC Frequency Scaling with Flexible-Pipeline Routers</a></i>. The International Symposium on Low Power Electronics and Design (ISLPED), Fukuoka, Japan, Aug. 2011. (<a href="Yin_ISLPED11.ppsx">PowerPoint Show</a>)</li><br>
+</ul>
+<h3 class="post-title">Poster</h3>
+<ul>
+<li><i><a href="ASPLOS2010.pdf">Energy Efficient NoC Design for CMP Systems</a></i>. 15th International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS), Pittsburgh, USA, Mar. 2010.</li><br>
+</ul>
+<h3 class="post-title">Other Publications</h3>
+<ul>
+<li>Pingqiang Zhou, <b>Jieming Yin</b>, Antonia Zhai, and Sachin S. Sapatnekar. <i><a href="techcon11.pdf">NoC Design and Performance Optimization</a></i>. SRC TECHCON, 2011.</li><br>
+</ul>
+</ul>
+</div>
+<p class="post-footer"><a href="#top">BACK TO TOP </a></p>
+<hr>
+
+
+<div id="experience" class="post"><a name="experience"></a>
+<font color="FF4900"><h2 class="post-title">&nbsp;&nbsp;Experience</h2></font>
+<ul>
+
+<h3 class="post-title">Internship</h3>
+<ul>
+<li><b><a href="http://www.qualcomm.com">Qualcomm, Inc.</a></b> <br>
+Multimedia Architecure: Performance and power modeling. <br>
+May - August 2013, San Diego, CA 
+</li> <br>
+</ul>
+
+<h3 class="post-title">Teaching Assisstant</h3>
+<ul>
+<li> Advanced Computer Architecture (CSCI 5204 / EE 5364) </li>
+<li> Introduction to Compilers (CSCI 5161) </li>
+<li> Operating Systems (CSCI 5103) </li>
+<li> Introduction to Operating Systems (CSCI 4061) </li> <br>
+</ul>
+
+<h3 class="post-title">Simulator</h3>
+<ul>
+<li> <b><a href="http://gem5-gpu.cs.wisc.edu/wiki">gem5-gpu simulator</a></b> <br>
+A heterogeneous CPU-GPU simulator. Contribute to support ARMv7 32-bit.
+</li> <br>
+</ul>
+
+</ul>
+</div>
+<p class="post-footer"><a href="#top">BACK TO TOP </a></p>
+<hr>
+
+
+<div id="contact" class="post"><a name="contact"></a>
+<font color="FF4900"><h2 class="post-title">&nbsp;&nbsp;Contact</h2></font>
+<ul>
+<li>4-192 Keller Hall,<br>
+200 Union Street SE,<br>
+Minneapolis, MN 55455</li><br>
+<li>Office: 6-244 Keller Hall</li><br>
+<li>E-mail: jyin [at-sign] cs [dot] umn [dot] edu</li><br>
+</ul>
+</div>
+<p class="post-footer"><a href="#top">BACK TO TOP </a></p>
+<hr>
+
+</div>
+</body>
+
+</html>
