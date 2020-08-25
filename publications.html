@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Jieming Yin's Homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  
+  p {font-size: 16px;}
+  h2 {
+    font-size: 30px;
+	letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #000;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .bg-5 { 
+    background-color: #e6e6e6; /* Light Gray */
+    color: #000;
+  }
+  
+  .container {
+  }
+  .container-fluid {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #2f2f2f !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html" style="font-weight: bold;">Jieming Yin</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html" style="font-weight: bold;">HOME</a></li>
+        <!--
+		<li><a href="research.html" style="font-weight: bold;">RESEARCH</a></li>
+		-->
+        <li><a href="publications.html" style="font-weight: bold;">PUBLICATIONS</a></li>
+        <li><a href="services.html" style="font-weight: bold;">SERVICES</a></li>
+		<li><a href="teaching.html" style="font-weight: bold;">TEACHING</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<!-- PUBLICATION -->
+<div id="publication" class="container-fluid bg-3 text-left" style="max-width: 1000px">
+  <h2 class="margin text-center" style="padding-top: 60px;">PUBLICATIONS</h2>
+
+  <h3 style="font-weight: bold;">Conference Publications</h3>
+	  <div class="container-fluid" style="max-width: 950px; padding-top: 0px;">  
+	  <p><i><a href=docs/NOCS2020.pdf>In-Network Memory Access Ordering for Heterogeneous Multicore Systems</a></i><br>
+	  <b>Jieming Yin</b>, Antonia Zhai<br>
+	  14th IEEE/ACM International Symposium on Networks-on-Chip <font color="red">(NOCS)</font>, 2020. </p><br>
+	  
+	  <p><i><a href=docs/DAC2020.pdf>Kite: A Family of Heterogeneous Interposer Topologies Enabled via Accurate Interconnect Modeling</a></i><br>
+	  Srikant Bharadwaj, <b>Jieming Yin</b>, Bradford M. Beckmann, Tushar Krishna<br>
+	  57th Annual Design Automation Conference <font color="red">(DAC)</font>, 2020. </p><br>
+
+	  <p><i><a href=docs/HPCA2020.pdf>Experiences with ML-Driven Design: A NoC Case Study</a></i><br>
+	  <b>Jieming Yin</b>, Subhash Sethumurugan, Yasuko Eckert, Alan Smith, Chintan Patel, Eric Morton, Mark Oskin, Natalie Enright Jerger, Gabriel H. Loh<br>
+	  26th IEEE International Symposium on High-Performance Computer Architecture <font color="red">(HPCA)</font>, 2020. </p><br>
+
+	  <p><i><a href=docs/IPDPS2019.pdf>Northup: Divide-and-Conquer Programming in Systems with Heterogeneous Memories and Processors</a></i><br>
+	  Shuai Che, <b>Jieming Yin</b><br>
+	  33rd IEEE International Parallel & Distributed Processing Symposium <font color="red">(IPDPS)</font>, 2019. </p><br>
+
+	  <p><i><a href=docs/ISCA2018.pdf>Modular Routing Design for Chiplet-based Systems</a></i><br>
+	  <b>Jieming Yin</b>, Zhifeng Lin, Onur Kayiran, Matthew Poremba, Muhammad Shoaib Bin Altaf, Natalie Enright Jerger, Gabriel H. Loh<br>
+	  45th International Symposium on Computer Architecture <font color="red">(ISCA)</font>, 2018.<br>
+	  <a href=https://spectrum.ieee.org/tech-talk/semiconductors/design/amd-tackles-coming-chiplet-revolution-with-new-chip-network-scheme><font color="red">Featured in IEEE Spectrum</font></a></p><br>
+
+	  <p><i><a href=docs/HPCA2018.pdf>Lost in Abstraction: Pitfalls of Analyzing GPUs at the Intermediate Language Level</a></i><br>
+	  Anthony Gutierrez, Bradford Beckmann, Alexandru Dutu, Joseph Gross, John Kalamatianos, Onur Kayiran, Michael LeBeane, Matthew Poremba, Brandon Potter, Sooraj Puthoor, Mark Wyse, <b>Jieming Yin</b>, Akshay Jain, Tim Rogers, Xianwei Zhang, Matt Sinclair<br>
+	  24th IEEE International Symposium on High-Performance Computer Architecture <font color="red">(HPCA)</font>, 2018. </p><br>
+
+	  <p><i><a href=docs/ISCA2017.pdf>There and Back Again: Optimizing the Interconnect in Networks of Memory Cubes</a></i><br>
+	  Matthew Poremba, Itir Akgun, <b>Jieming Yin</b>, Onur Kayiran, Yuan Xie, Gabriel H. Loh<br>
+	  44th International Symposium on Computer Architecture <font color="red">(ISCA)</font>, 2017. </p><br>
+
+	  <p><i><a href=docs/HPCA2016.pdf>Efficient Synthetic Traffic Models for Large, Complex SoCs</a></i><br>
+	  <b>Jieming Yin</b>, Onur Kayiran, Matthew Poremba, Natalie Enright Jerger, Gabriel H. Loh<br>
+	  22nd International Symposium on High Performance Computer Architecture <font color="red">(HPCA)</font>, 2016. </p><br>
+
+	  <p><i><a href=docs/IPDPS2014.pdf>Energy-Efficient Time-Division Multiplexed Hybrid-Switched NoC for Heterogeneous Multicore Systems</a></i><br>
+	  <b>Jieming Yin</b>, Pingqiang Zhou, Sachin S. Sapatnekar, Antonia Zhai<br>
+	  28th IEEE International Parallel & Distributed Processing Symposium <font color="red">(IPDPS)</font>, 2014. </p><br>
+
+	  <p><i><a href=docs/ISLPED2012.pdf>Energy Efficient Non-Minimal Path On-chip Interconnection Network for Heterogeneous Multicore Systems</a></i><br>
+	  <b>Jieming Yin</b>, Pingqiang Zhou, Anup P. Holey, Sachin S. Sapatnekar, Antonia Zhai<br>
+	  The International Symposium on Low Power Electronics and Design <font color="red">(ISLPED)</font>, 2012. </p><br>
+
+	  <p><i><a href=docs/ISLPED2011.pdf>NoC Frequency Scaling with Flexible-Pipeline Routers</a></i><br>
+	  Pingqiang Zhou, <b>Jieming Yin</b>, Antonia Zhai, Sachin S. Sapatnekar<br>
+	  The International Symposium on Low Power Electronics and Design <font color="red">(ISLPED)</font>, 2011. </p><br>
+	  </div>
+
+  <h3 style="font-weight: bold;">Journal Publications</h3>
+	  <div class="container-fluid" style="max-width: 950px; padding-top: 0px;">  
+	  <p><i><a href="https://www.sciencedirect.com/science/article/pii/S0167926017305576">An orchestrated NoC prioritization mechanism for heterogeneous CPU-GPU systems</a></i><br>
+	  Xiangwei Cai, <b>Jieming Yin</b>, Pingqiang Zhou<br>
+	  Integration, 2019.</p><br>
+	  </div>
+  
+
+  <h3 style="font-weight: bold;">Other Publications</h3>
+	  <div class="container-fluid" style="max-width: 950px; padding-top: 0px;">  
+	  <p><i><a href="docs/AIDArc2018.pdf">Toward More Efficient NoC Arbitration: A Deep Reinforcement Learning Approach</a></i><br>
+	  <b>Jieming Yin</b>, Yasuko Eckert, Shuai Che, Mark Oskin, Gabriel H. Loh<br>
+	  The 1st International Workshop on AI-assisted Design for Architecture (AIDArc), 2018.</p><br>
+
+	  <p><i><a href="docs/techcon11.pdf">NoC Design and Performance Optimization</a></i><br>
+	  Pingqiang Zhou, <b>Jieming Yin</b>, Antonia Zhai, Sachin S. Sapatnekar<br>
+	  SRC TECHCON, 2011.</p><br>
+	  </div>
+
+  <h3 style="font-weight: bold;">Patents</h3>
+	  <div class="container-fluid" style="max-width: 950px; padding-top: 0px;">  
+	  <p><i>Method and apparatus for masking and transmitting data</i><br>
+	  Shuai Che, Jieming Yin<br>
+	  US Patent 10,042,774. Granted Aug, 2018. </p><br>
+
+	  <p><i>Setting operating points for circuits in an integrated circuit chip</i><br>
+	  Wei Huang, Yasuko Eckert, Xudong An, Muhammad Shoaib Bin Altaf, Jieming Yin<br>
+	  US Patent 10,097,091. Granted Oct, 2018. </p><br>
+
+	  <p><i>Using Predictions of Outcomes of Cache Memory Access Requests for Contolling Whether A Request Generator Sends Memory Access Requests To A Memory In Parallel With Cache Memory Access Requests</i><br>
+	  Jieming Yin, Yasuko Eckert, Matthew Poremba, Steven Raasch, Doug Hunt<br>
+	  US Patent 10,719,441. Granted Jul, 2020.</p><br>
+
+	  <p><i>Reconfigurable prediction engine for general processor counting</i><br>
+	  Shuai Che, Jieming Yin<br>
+	  US Patent App 15/922,875. Filed Mar, 2018.</p><br>
+	  
+	  <p><i>Selecting a precision level for executing a workload in an electronic device</i><br>
+	  Tony Gutierrez, Sergey Blagodurov, Scott Moe, Xianwei Zhang, Jieming Yin, Matt Sinclair<br>
+	  US Patent App 15/948,795. Filed Apr, 2018.</p><br>
+
+	  <p><i>Architecture for deep Q-learning</i><br>
+	  Shuai Che, Jieming Yin<br>
+	  US Patent App 16/176,903. Filed Oct, 2018.</p><br>
+	  
+	  <p><i>Mechanism for Dynamic Latency-Bandwidth Trade-off for Efficient Broadcasts/Multicasts</i><br>
+	  Mohamed Ibrahim, Onur Kayiran, Yasuko Eckert, Jieming Yin<br>
+	  US Patent App 16/224,739. Filed Dec, 2018.</p><br>
+
+	  <p><i>Cache management based on reuse distance</i><br>
+	  Jieming Yin, Subhash Sethumurugan, Yasuko Eckert<br>
+	  190256-US-NP. Filed Oct, 2019.</p><br>
+
+	  <p><i>Cache line re-reference interval prediction using physical page address</i><br>
+	  Jieming Yin, Subhash Sethumurugan, Yasuko Eckert<br>
+	  190350-US-NP. Filed Dec, 2019.</p><br>
+
+	  <p><i>Cache management based on access type priority</i><br>
+	  Jieming Yin, Subhash Sethumurugan, Yasuko Eckert<br>
+	  190351-US-NP. Filed Dec, 2019.</p><br>
+
+	  <p><i>Look-ahead teleportation for reliable computing in multi-SIMD quantum processor</i><br>
+	  Onur Kayiran, Jieming Yin, Yasuko Eckert<br>
+	  190066-US-NP. Filed Feb, 2020.</p><br>
+	  </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+</footer>
+
+</body>
+</html>
